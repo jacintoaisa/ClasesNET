@@ -7,21 +7,15 @@ using System.Threading.Tasks;
 
 namespace ConsoleAppClases.Garage
 {
-    public class Coche : IAlquilable
+    public class Patinete : IAlquilable
     {
-        public IVisionable Visor { get; set; }
         public string Identificador { get; set; }
-        public double PrecioHora { get; set; } = 4;
-        public double Tiempo { get; set; }
+        public double PrecioHora { get; set; }
+        public double Tiempo  { get; set; }
 
         public double dameCoste()
         {
             return PrecioHora * Tiempo;
-        }
-
-        public override string? ToString()
-        {
-            return Visor.DameCadena(this);
         }
     }
 }
