@@ -21,5 +21,13 @@ var MiEjemplo = new ConsoleAppClases.Modelo.Coche("sasoajsoas");
 
 Console.WriteLine(MiMercedes);
 
-IAlquilable alquilable = new ConsoleAppClases.Garage.Coche() { Identificador = "jhuhu", Tiempo = 2 };
-Console.WriteLine(alquilable);
+
+IFactoryAlquilable Factoria = new AlquilableFactoryV01();
+
+IAlquilable alquilable1 = Factoria.dameElemento(EnumTipos.Coche, "uyatsuyastauyst", 8);
+IAlquilable alquilable2 = Factoria.dameElemento(EnumTipos.Furgoneta, "sasasasas", 9);
+IAlquilable alquilable3 = Factoria.dameElemento(EnumTipos.Patinete, "sasasasas", 9);
+
+Console.WriteLine(alquilable1);
+Console.WriteLine(alquilable2);
+
